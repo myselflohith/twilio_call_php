@@ -27,12 +27,14 @@ Before running this application, you will need:
 ```bash
 git clone https://github.com/myselflohith/twilio_call_php.git
 cd twilio_call_php
+```
 
 ### 2. Install Dependencies
 - PHP
 
 ```bash
 composer install
+```
 
 ### 3. Configure Environment Variables
 
@@ -44,3 +46,4 @@ TWILIO_AUTH_TOKEN=your_auth_token
 TWILIO_API_KEY=your_api_key
 TWILIO_API_SECRET=your_api_secret
 TWILIO_APP_SID=your_twiml_app_sid
+```
