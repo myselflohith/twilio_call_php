@@ -30,7 +30,7 @@ cd twilio_call_php
 ```
 
 ### 2. Install Dependencies
-- PHP
+PHP
 
 ```bash
 composer install
@@ -38,7 +38,7 @@ composer install
 
 ### 3. Configure Environment Variables
 
-- Create a .env file in the root directory:
+Create a .env file in the root directory:
 
 ```bash
 TWILIO_ACCOUNT_SID=your_account_sid
@@ -47,3 +47,43 @@ TWILIO_API_KEY=your_api_key
 TWILIO_API_SECRET=your_api_secret
 TWILIO_APP_SID=your_twiml_app_sid
 ```
+Replace the placeholders with your Twilio credentials.
+
+### 4. Run the PHP Backend
+
+```bash
+php -S localhost:8000
+```
+
+## Usage
+### 1. Making Calls:
+
+- Enter a phone number and click "Call" to initiate an outbound call.
+- Monitor the call status and volume indicators in real time.
+
+### 2. Receiving Calls:
+
+- When an incoming call arrives, the caller’s number is displayed.
+- You can accept or reject the call (e.g., reject blocked numbers).
+
+### 3.Audio Device Selection:
+
+- Select speakers and ringtone devices from the dropdown menus.
+- Adjust audio settings based on available devices.
+
+## Key Functions
+- Twilio.Device.setup(token): Initializes Twilio with an access token.
+- Twilio.Device.connect(params): Connects a call using specified parameters.
+- Twilio.Device.incoming(): Handles incoming calls with custom logic.
+- bindVolumeIndicators(conn): Monitors input/output call volume.
+
+### Twilio Configuration
+Ensure your Twilio number routes incoming calls to the correct TwiML app via the Twilio Console.
+
+### Troubleshooting
+- Token Issues: Verify .env credentials if token generation fails.
+- Audio Devices: Ensure HTTPS and microphone permissions are enabled in the browser.
+
+### Contributing
+
+Pull requests are welcome! For significant changes, please open an issue to discuss proposed updates.
